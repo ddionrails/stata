@@ -11,5 +11,5 @@ d Author: Knut Wenzig
 d Support: kwenzig@diw.de
 * 2015-02-26 v0beta - text
 f dortoolsbeta/dortools.sthlp
-f dortools/gnugpl.sthlp
+f dortoolsbeta/gnugpl.sthlp
 f dorappend/dorappend.ado
