@@ -1,6 +1,8 @@
 ---
-title: Stata ado from DIW Berlin / GSOEP
+title: Stata ados from DIW Berlin / GSOEP
 ---
+
+# Attention: beta-status!
 
 # Stata
 
