@@ -1,0 +1,15 @@
+d dortoolsbeta: (beta)
+d
+d text 
+d (see http://ddionrails.org/stata/) 
+d
+d Requires: Stata version 13 or newer
+d
+d Distribution-Date: 20150226
+d
+d Author: Knut Wenzig
+d Support: kwenzig@diw.de
+* 2015-02-26 v0beta - text
+f dortoolsbeta/gnugpl.sthlp
+f dorappendbeta/dorappend.ado
+f dorappendbeta/dorappend.sthlp
