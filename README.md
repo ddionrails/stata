@@ -10,5 +10,6 @@
  adopath + "path"
 
 After local changes
+
  discard
  
