@@ -1,6 +1,6 @@
 {smcl}
 {* *! version 1.0.1 27 February 2015}{...}
-help for {cmd:dorappend}{right:version beta  (2 March 2015)}
+help for {cmd:dorappend}{right:version beta  (13 March 2015)}
 {hline}
 
 
@@ -22,7 +22,7 @@ help for {cmd:dorappend}{right:version beta  (2 March 2015)}
 {title:Description}
 
 {pstd}
-{cmd:dorappend} appends two datasets and fills resulting spare cells with a given value while {help append} fills this cells only with NA.
+{cmd:dorappend} appends two datasets and fills resulting spare cells with a given value while {help append} fills this cells only with NA. The datasets need to have the characteristic dataset containing the name of the dataset.
 {p_end}
 
 
@@ -30,13 +30,13 @@ help for {cmd:dorappend}{right:version beta  (2 March 2015)}
 {title:Options}
 
 {phang}
-{opt generate(newvar)} specifies the name of a variable to be created that will   mark the source of observations. (string variable with dataset names)
+{opt generate(newvar)} specifies the name of a variable to be created that will mark the source of observations. (string variable with dataset names)
 {p_end}
 {phang}
 {opt mval(value)} specifies the value to be assigned, if a variable is not present in the origin dataset. In case of string variables the value is stored as string.
 {p_end}
 {phang}
-{opt mlab(value)} the label added to value labels of variables which are only present in one of the two files.
+{opt mlab(value)} (not yet implemented!) the label added to value labels of variables which are only present in one of the two files. (not yet implemented)
 {p_end}
 
 
@@ -44,7 +44,7 @@ help for {cmd:dorappend}{right:version beta  (2 March 2015)}
 {title:Remarks}
 
 {pstd}
-This command is part of the {browse "http://ddionrails.org/stata":dortools} bundle.
+This command is part of the {browse "http://ddionrails.org/stata":dortools} bundle. Please inform the author about issues using this {browse "https://github.com/ddionrails/stata/issues":tracker}.
 {p_end}
 
 {pstd}
@@ -52,8 +52,8 @@ The source code of the program is licensed under the GNU General Public License 
 {p_end}
 
 
-{marker author}{...}
-{title:Author}
+{marker authors}{...}
+{title:Authors}
 
 {pstd}
 Knut Wenzig ({browse "mailto:kwenzig@diw.de":mailto:kwenzig@diw.de}), DIW Berlin, German Socio-Economic Panel (SOEP), Germany.

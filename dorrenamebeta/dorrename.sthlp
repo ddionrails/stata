@@ -1,13 +1,13 @@
 {smcl}
 {* *! version 1.0.1 27 February 2015}{...}
-help for {cmd:dorrename}{right:version beta  (2 March 2015)}
+help for {cmd:dorrename}{right:version beta  (13 March 2015)}
 {hline}
 
 
 {title:Title}
 
 {phang}
-{bf:dorrename} {hline 2} renames variables in a datasets using metadata in DDIonRails format (generations.csv).
+{bf:dorrename} {hline 2} renames variables in a dataset using metadata in DDIonRails format.
 
 
 {marker syntax}{...}
@@ -22,7 +22,7 @@ help for {cmd:dorrename}{right:version beta  (2 March 2015)}
 {title:Description}
 
 {pstd}
-{cmd:dorrename} renames variables in a datasets using metadata in DDIonRails format (generations.csv). The dataset needs to have the characteristcs study and version. Together with this characteristics and the information given in the options, the using file (generations.csv) is restricted for the relevant lines. If the dataset does not have the necessary characteristics, they have to be added in advance. Variables that are not present in the renaming table will be deleted.
+{cmd:dorrename} renames variables in a dataset using metadata in DDIonRails format ({browse "http://ddionrails.org/imports/generations_csv.html":generations.csv}). The dataset needs to have the characteristics study, dataset and version. Together with this characteristics and the information given in the options, the using file (generations.csv) is restricted for the relevant lines. If the dataset does not have the necessary characteristics, they have to be added in advance. Variables that are not present in the renaming table will be deleted with a notice.
 {p_end}
 
 
@@ -53,7 +53,7 @@ The source code of the program is licensed under the GNU General Public License 
 
 
 {marker author}{...}
-{title:Author}
+{title:Authors}
 
 {pstd}
 Knut Wenzig ({browse "mailto:kwenzig@diw.de":kwenzig@diw.de}), DIW Berlin, German Socio-Economic Panel (SOEP), Germany.
