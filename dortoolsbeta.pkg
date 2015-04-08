@@ -12,14 +12,15 @@ d Support: kwenzig@diw.de
 * 2015-03-13 v1beta - completed working suite
 * 2015-02-26 v0beta - text
 
-f dorrenamebeta/dorrename.ado
-f dorrenamebeta/dorrename.sthlp
+f dorappendbeta/dorappend.ado
+f dorappendbeta/dorappend.sthlp
 f dorcomparedtabeta/dorcomparedta.ado
 f dorcomparedtabeta/dorcomparedta.sthlp
 f dorcomparexlsbeta/dorcomparexls.ado
 f dorcomparexlsbeta/dorcomparexls.sthlp
-f dorappendbeta/dorappend.ado
-f dorappendbeta/dorappend.sthlp
 f dororderbeta/dororder.ado
 f dororderbeta/dororder.sthlp
+f dorlabeldtabeta/dorlabeldta.ado
+f dorrenamebeta/dorrename.ado
+f dorrenamebeta/dorrename.sthlp
 f dortoolsbeta/gnugpl.sthlp
