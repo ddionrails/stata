@@ -1,4 +1,4 @@
-program define dorlabeldta2, rclass
+program define dorlabeldta, rclass
 version 13
 syntax using/, language(string) enc(string)
 
