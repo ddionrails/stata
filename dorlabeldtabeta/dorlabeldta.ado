@@ -66,14 +66,13 @@ forvalues x = 1/`N' {
 restore
 
 // Uebersetzung der Label
+label drop _all
 foreach y of varlist * {
-	quietly: labellist `y'
-	quietly: return list
-    local lblname = r(lblname)
-	if "-`lblname'"!="-." {
-		local values = `"`values_`y''"'
+	local values = `"`values_`y''"'
+	if "`values'"!="" {
+		label values `y' `y'	
 		forvalues x = 1/`values' {
-			label define `lblname' `value_`y'_`x'' `"`vallab_`y'_`x'_`language''"', add modify
+			label define `y' `value_`y'_`x'' `"`vallab_`y'_`x'_`language''"', add modify
 		}
 	}
 }
