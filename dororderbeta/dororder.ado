@@ -14,7 +14,7 @@ keep name
 rename name variable
 quietly: save "`describe'", replace
 
-quietly: import delimited "`using'", delimiter(comma) varnames(1) clear
+quietly: import delimited "`using'", delimiter(comma) varnames(1) stringcols(_all) clear
 quietly: keep if study=="`study'"
 quietly: keep if dataset=="`dataset'"
 quietly: keep if version=="`version'"

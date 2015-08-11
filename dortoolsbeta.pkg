@@ -20,6 +20,8 @@ f dorcomparexlsbeta/dorcomparexls.ado
 f dorcomparexlsbeta/dorcomparexls.sthlp
 f dororderbeta/dororder.ado
 f dororderbeta/dororder.sthlp
+f dorevaluatebeta/dorevaluate.ado
+f dorevaluatebeta/dorevaluate.sthlp
 f dorlabeldtabeta/dorlabeldta.ado
 f dorrenamebeta/dorrename.ado
 f dorrenamebeta/dorrename.sthlp
