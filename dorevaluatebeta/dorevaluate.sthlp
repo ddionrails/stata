@@ -30,7 +30,7 @@ help for {cmd:dorevaluate}{right:version beta  (8 June 2015)}
 {title:Options}
 
 {phang}
-{opt srcvariable(variable)} specifies the folder path, in which the compiled PDFs are saved. It must be written in double quotes.
+{opt path("pathname")} specifies the folder path, in which the compiled PDFs are saved. It must be written in double quotes.
 {p_end}
 {phang}
 {opt srcvariable(variable)} specifies the name of the variable, that indicates the different sources of the dataset. It must be numeric.
