@@ -10,7 +10,7 @@ http://www.diw.de/
 
 program dorevaluate
 	version 13
-	syntax [, PAth(string) SRCvariable(varname numeric max=1) GPPage(integer 6)]
+	syntax [varlist] [, PAth(string) SRCvariable(varname numeric max=1) GPPage(integer 6)]
 		if missing("`srcvariable'") {
 			di "{error: No source variable was defined. Program stops.}"
 			break
@@ -20,8 +20,6 @@ program dorevaluate
 			di "{text:path was not specified. Path is now: `path'}"
 		}
 		local dataset : char _dta[dataset]
-		qui d , varl
-		local varl = r(varlist)
 		local X = 0
 		local Y = 1
 		qui tab `srcvariable', gen(src)
@@ -29,7 +27,7 @@ program dorevaluate
 		tempvar help
 		gen `help' = 0
 		di "{input:`dataset' is being evaluated by variable {bf:`srcvariable'}, which indicates {bf:`srcmax'} sources.}"
-		foreach var in `varl' {
+		foreach var in `varlist' {
 			local vartype: type `var'
 			if substr("`var'",1,.) == "`srcvariable'" | substr("`vartype'",1,3)=="str"{
 				if substr("`vartype'",1,3)=="str"{
@@ -146,8 +144,10 @@ program dorevaluate
 			}
 		}
 		foreach M of numlist 1/`srcmax' {
-			local srclab: variable label src`M'
-			display "{text: Because there is only one value assigned to all `srclab', no graphs are plotted for the follwing variables: {bf:`noplot`M''} }"
+			if "`noplot`M''" != "" {
+				local srclab: variable label src`M'
+				display "{text: Because there is only one value assigned to all `srclab', no graphs are plotted for the follwing variables: {bf:`noplot`M''} }"
+			}
 		}
 		drop src*
 		if `gppage' == 1{
