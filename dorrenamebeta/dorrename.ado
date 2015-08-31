@@ -96,6 +96,7 @@ drop `deletelist'
 * ermöglicht Überkreuzumbenennungen
 foreach x of numlist 1/`N' {
 rename `var`x'_input' var`x'_XxX
+char var`x'_XxX[oldname] `var`x'_input'
 }
 foreach x of numlist 1/`N' {
 rename var`x'_XxX `var`x'_output' 
