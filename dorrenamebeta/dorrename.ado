@@ -26,7 +26,7 @@ keep input_variable
 
 quietly: save "`inputdescribe'"      /* save memory into the temporary file */
 
-quietly: import delimited "`using'", delimiter(comma) varnames(1) clear 
+quietly: import delimited "`using'", delimiter(comma) varnames(1) stringcols(_all) clear 
 * Beschränken auf den input-Datensatz und output-Datensatz
 quietly: keep if input_study == "`istudy'"
 quietly: keep if input_dataset == "`idataset'"
