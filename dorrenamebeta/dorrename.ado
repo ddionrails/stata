@@ -78,7 +78,7 @@ use "`deletevars'", clear
 quietly: keep if _merge==2
 local deletelist ""
 display "`deletevarnumber' variables will be deleted in dataset, due to missing rename information:"
-foreach x of numlist 1/`deletevarnumber' {
+forvalues x = 1/`deletevarnumber' {
 local addvariable = input_variable[`x']
 local deletelist `deletelist' `addvariable'
 }
