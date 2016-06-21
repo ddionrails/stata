@@ -2,6 +2,8 @@ program define dororder, rclass
 version 13
 syntax using/
 
+* 2016-06-21 v2beta - dororder: fix for lager datasets (foreach -> forvalues)
+
 local study : char _dta[study]
 local dataset : char _dta[dataset]
 local version : char _dta[version]
@@ -44,7 +46,7 @@ drop _merge position position2
 
 local variablenumber = _N
 local orderlist ""
-foreach x of numlist 1/`variablenumber' {
+forvalues x = 1/`variablenumber' {
 local addvariable = variable[`x']
 local orderlist `orderlist' `addvariable'
 }
