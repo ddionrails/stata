@@ -9,7 +9,7 @@ title: Stata ados from DIW Berlin / GSOEP
 ## Install
 net install dortoolsbeta, from(http://ddionrails.org/stata/)
 
-## Update (Not working yet. Uninstall and install instead.)
+## Update
 adoupdate dortoolsbeta, update
 
 ## Uninstall
