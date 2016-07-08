@@ -1,6 +1,6 @@
 program define dorrename, rclass
 version 13
-syntax using/, ostudy(string) odataset(string) oversion(string)
+syntax using/, ostudy(string) odataset(string) oversion(string) [keep]
 
 /*dataset ermitteln:
 local idataset = "`c(filename)'"
@@ -9,10 +9,6 @@ quietly: return list
 local idataset = "`r(filename)'"
 */
 
-local idataset : char _dta[dataset]
-local istudy : char _dta[study]
-local iversion : char _dta[version]
-
 * di "outputstudy: `ostudy'"
 * di "outputdataset: `odataset'"
 * di "outputversion: `oversion'"
@@ -20,7 +16,7 @@ local iversion : char _dta[version]
 preserve
 
 tempfile inputdescribe     /* create a temporary file */
-describe, replace
+describe, replace clear
 rename name input_variable
 keep input_variable
 
@@ -46,7 +42,7 @@ quietly: merge 1:1 input_variable using "`inputdescribe'"
 quietly: tab _merge if _merge==1
 if r(N)>0 {
 display r(N) " line/s in generations.csv is superfluous, probably you want to delete them/it:"
-list output_study-input_variable if _merge==1
+list output_* input_* if _merge==1
 }
 
 * zu löschende Variablen in dataset
@@ -77,7 +73,7 @@ if `deletevarnumber'>0 {
 use "`deletevars'", clear
 quietly: keep if _merge==2
 local deletelist ""
-display "`deletevarnumber' variables will be deleted in dataset, due to missing rename information:"
+display "`deletevarnumber' variables can be deleted in dataset, due to missing rename information:"
 forvalues x = 1/`deletevarnumber' {
 local addvariable = input_variable[`x']
 local deletelist `deletelist' `addvariable'
@@ -85,7 +81,7 @@ local deletelist `deletelist' `addvariable'
 }
 
 restore
-if `deletevarnumber'>0 {
+if `deletevarnumber'>0 & "`keep'"!="keep"{
 display "`deletelist'"
 drop `deletelist'
 }
