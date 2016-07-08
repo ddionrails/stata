@@ -9,6 +9,7 @@ d Distribution-Date: 20160621
 d
 d Author: Knut Wenzig
 d Support: kwenzig@diw.de
+* 2016-07-08 v3beta - dorrename: introduce option keep
 * 2016-06-21 v2beta - dororder: fix for lager datasets (foreach -> forvalues)
 * 2015-03-13 v1beta - completed working suite
 * 2015-02-26 v0beta - text
