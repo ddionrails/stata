@@ -9,6 +9,11 @@ quietly: return list
 local idataset = "`r(filename)'"
 */
 
+* extract input-information from dataset
+local idataset : char _dta[dataset]
+local istudy : char _dta[study]
+local iversion : char _dta[version]
+
 * di "outputstudy: `ostudy'"
 * di "outputdataset: `odataset'"
 * di "outputversion: `oversion'"
