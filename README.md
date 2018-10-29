@@ -1,6 +1,6 @@
 # Stata
 
-A Stata package to perform metadata driven datamanagemet.
+A Stata package to perform metadata driven data management.
 
 ## Install
 net install dortoolsbeta, from(http://ddionrails.org/stata/)
